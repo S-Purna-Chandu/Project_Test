@@ -1,0 +1,22 @@
+select 
+    AsOfDate,
+    CUSIP,
+    SecurityType,
+    SecurityDescription,
+    Term,
+    MaturityDate,
+    Issuer,
+    SpreadPct,
+    CouponPct,
+    CurrentFaceValue,
+    ParValue,
+    InflationCompensation,
+    PercentOutstanding,
+    ChangeFromPriorWeek,
+    ChangeFromPriorYear,
+    isAggregated,
+    current_date() as Created_Date,
+    current_user() as created_By,
+    current_date() as Modified_Date,
+    current_user() as Modified_By
+from {{ref('raw_fed_holding')}}

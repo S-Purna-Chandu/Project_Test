@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: raw_staging
+    database: raw  
+    schema: staging  
+    tables:
+      - name: fed_data
