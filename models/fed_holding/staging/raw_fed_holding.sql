@@ -17,5 +17,5 @@ select
     t.$14::FLOAT AS ChangeFromPriorWeek,
     t.$15::FLOAT AS ChangeFromPriorYear,
     t.$16::VARCHAR(1) AS isAggregated
-FROM @{{source('raw_staging','fed_data')}}{{table_name}} (file_format => FED_HOLDING_CSV_FILE_FORMAT) t
+FROM @{{source('raw_staging','fed_data')}}{{table_name}} (file_format => raw.staging.FED_HOLDING_CSV_FILE_FORMAT) t
 
